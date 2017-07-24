@@ -127,6 +127,7 @@ public class Cardi {
 	 * @param binary
 	 * @return
 	 */
+	@Deprecated
 	public static int binarySum(String binary) {
 		print(binary);
 		
@@ -138,7 +139,13 @@ public class Cardi {
 	
 		return sum;
 	}
-	
+	/**
+	 * binary의 1의 갯수를 구함
+	 * 기존에 문자열을 사용해서 갯수를 구했던 것을 
+	 * bit연산자를 이용하여 처리
+	 * @param binary
+	 * @return
+	 */
 	public static int binarySum(int data) {
 		int cnt = 0;
 		
@@ -153,7 +160,7 @@ public class Cardi {
 	}
 	
 	public static void main(String[] args) {
-		File f = new File("C:\\Users\\dbs\\eclipse-workspace\\test\\src\\test\\data.txt");
+		File f = new File("경로\\data.txt");
 		FileReader fr = null;
 		BufferedReader bs = null;
 		
