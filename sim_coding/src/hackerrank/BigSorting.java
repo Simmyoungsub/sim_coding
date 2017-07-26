@@ -1,4 +1,4 @@
-package algorithm.kakao;
+package hackerrank;
 
 import java.util.Arrays;
 import java.util.Comparator;
