@@ -5,6 +5,8 @@ import java.util.Scanner;
 import hackerrank.util.CommonUtils;
 
 public class QuickSorting2 {
+	public static int cnt = 0;
+	
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
@@ -19,13 +21,13 @@ public class QuickSorting2 {
 		long end = System.currentTimeMillis();
 
 		System.out.println("소요시간 : " + (end-start)/1000.0f);
-		
+		System.out.println("swap count : " + cnt);
 		sc.close();
 	}
 	
 	public static void quickSort(int[] ar,int start,int end) {
 		if(start < end) {
-			int quick_sort_idx = partition(ar,start,end,"mid");
+			int quick_sort_idx = partition(ar,start,end,"end");
 			quickSort(ar,start,quick_sort_idx-1);
 			quickSort(ar,quick_sort_idx+1,end);
 			CommonUtils.printArray(ar,0,ar.length-1);
@@ -76,11 +78,11 @@ public class QuickSorting2 {
 			while((left<=right) && (ar[right] >= pivot)) right--;
 			
 			if(left<=right) {
-				CommonUtils.swap(ar,left,right);
+				CommonUtils.swap(ar,left,right,cnt);
 			}
 		}
 		
-		CommonUtils.swap(ar,pivot_idx,right);
+		CommonUtils.swap(ar,pivot_idx,right,cnt);
 		
 		return right;
 	}
