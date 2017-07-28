@@ -1,4 +1,4 @@
-package hackerrank;
+package sorting;
 
 import hackerrank.util.CommonUtils;
 

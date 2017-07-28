@@ -1,6 +1,6 @@
 package hackerrank.util;
 
-import hackerrank.QuickSorting2;
+import sorting.QuickSorting2;
 
 public class CommonUtils {
 
